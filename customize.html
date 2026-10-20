@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Outfit | STYLEVERSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                STYLE<span>VERSE</span>
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html" class="active">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+
+            <button class="search-toggle" onclick="toggleSearch()" aria-label="Open search">
+                🔍
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="search-container">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for outfits..."
+            aria-label="Search for outfits"
+        >
+
+        <button onclick="submitSearch()">Search</button>
+        <button onclick="closeSearch()" aria-label="Close search">✕</button>
+    </div>
+
+    <!-- Page Heading -->
+    <section class="page-banner">
+        <h1>Customize Your Outfit</h1>
+        <p>Design it your way. Wear your creativity.</p>
+    </section>
+
+    <!-- Customization Section -->
+    <main class="content-section">
+
+        <div class="customization-intro">
+            <h2>Make It Uniquely Yours</h2>
+            <p>
+                Choose your favorite clothing item, select your size and color,
+                and add your own text to personalize your outfit.
+            </p>
+        </div>
+
+        <div class="customization-layout">
+
+            <!-- Customization Form -->
+            <form id="customization-form" class="customization-form">
+
+                <div class="form-group">
+                    <label for="custom-product">Choose an Outfit</label>
+
+                    <select id="custom-product" name="product" required>
+                        <option value="1">Classic T-Shirt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="custom-text">Your Custom Text</label>
+
+                    <input
+                        type="text"
+                        id="custom-text"
+                        name="customText"
+                        placeholder="Example: Your name or favorite quote"
+                        maxlength="30"
+                    >
+
+                    <small>Maximum 30 characters.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="custom-size">Choose Size</label>
+
+                    <select id="custom-size" name="size" required>
+                        <option value="S">Small (S)</option>
+                        <option value="M" selected>Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="custom-color">Choose Color</label>
+
+                    <select id="custom-color" name="color" required>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">
+                    Add Customized Outfit to Cart
+                </button>
+
+            </form>
+
+            <!-- Live Preview -->
+            <div class="customization-preview">
+
+                <h2>Design Preview</h2>
+
+                <div
+                    class="custom-preview-image"
+                    id="custom-preview-image"
+                >
+                    <div class="custom-preview-shirt">
+                        <span id="custom-preview-text">Your Design</span>
+                    </div>
+                </div>
+
+                <p>
+                    This is a simple preview of your customization.
+                    The actual printed result may look different.
+                </p>
+
+                <div class="preview-details">
+                    <p><strong>Selected size:</strong> <span id="preview-size">M</span></p>
+                    <p><strong>Selected color:</strong> <span id="preview-color">Black</span></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Instructions -->
+        <section class="customization-info">
+            <h2>How It Works</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>1. Choose</h3>
+                    <p>Select the clothing item you want to personalize.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>2. Personalize</h3>
+                    <p>Choose your size and color, then enter your text.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>3. Add to Cart</h3>
+                    <p>Add your customized outfit to your cart.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    STYLE<span>VERSE</span>
+                </a>
+                <p>Your style, your choice, your universe.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Customer Service</h3>
+                <a href="checkout.html">Checkout</a>
+                <a href="shop.html">Explore Outfits</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STYLEVERSE. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

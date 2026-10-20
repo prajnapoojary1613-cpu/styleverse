@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STYLEVERSE | Fashion Your Way</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">STYLE<span>VERSE</span></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="customize.html">Customize</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="search-btn" onclick="toggleSearch()">
+                🔍
+            </button>
+
+            <a href="wishlist.html" class="icon-link">
+                ♡
+            </a>
+
+            <a href="cart.html" class="cart-icon">
+                🛒
+                <span id="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================== SEARCH BAR ==================== -->
+
+    <div class="search-container" id="search-container">
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for dresses, shirts, jeans..."
+            onkeyup="searchProducts()"
+        >
+
+        <button onclick="closeSearch()">✕</button>
+
+    </div>
+
+
+    <!-- ==================== HERO SECTION ==================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-small-text">
+                    WELCOME TO STYLEVERSE
+                </p>
+
+                <h1>
+                    Wear Your
+                    <span>Story.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover fashion that matches your personality.
+                    Shop unique styles or customize your own look.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="shop.html" class="btn btn-primary">
+                        Shop Now
+                    </a>
+
+                    <a href="customize.html" class="btn btn-secondary">
+                        Customize Your Style
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="fashion-placeholder">
+
+                    <div class="placeholder-text">
+                        <span>STYLE</span>
+                        <strong>VERSE</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CATEGORIES ==================== -->
+
+        <section class="categories-section">
+
+            <div class="section-heading">
+
+                <p>EXPLORE</p>
+
+                <h2>Shop By Category</h2>
+
+                <span>
+                    Find something made for your style.
+                </span>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="shop.html?category=women" class="category-card">
+
+                    <div class="category-image women-image">
+                        <span>WOMEN</span>
+                    </div>
+
+                    <div class="category-info">
+                        <h3>Women</h3>
+                        <p>Explore Collection →</p>
+                    </div>
+
+                </a>
+
+
+                <a href="shop.html?category=men" class="category-card">
+
+                    <div class="category-image men-image">
+                        <span>MEN</span>
+                    </div>
+
+                    <div class="category-info">
+                        <h3>Men</h3>
+                        <p>Explore Collection →</p>
+                    </div>
+
+                </a>
+
+
+                <a href="shop.html?category=casual" class="category-card">
+
+                    <div class="category-image casual-image">
+                        <span>CASUAL</span>
+                    </div>
+
+                    <div class="category-info">
+                        <h3>Casual</h3>
+                        <p>Explore Collection →</p>
+                    </div>
+
+                </a>
+
+
+                <a href="shop.html?category=formal" class="category-card">
+
+                    <div class="category-image formal-image">
+                        <span>FORMAL</span>
+                    </div>
+
+                    <div class="category-info">
+                        <h3>Formal</h3>
+                        <p>Explore Collection →</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== FEATURED PRODUCTS ==================== -->
+
+        <section class="featured-section">
+
+            <div class="section-heading">
+
+                <p>STYLEVERSE PICKS</p>
+
+                <h2>Trending Now</h2>
+
+                <span>
+                    Some of our most-loved styles.
+                </span>
+
+            </div>
+
+
+            <div class="product-grid" id="featured-products">
+
+                <!-- Products will be added by JavaScript -->
+
+            </div>
+
+
+            <div class="center-button">
+
+                <a href="shop.html" class="btn btn-primary">
+                    View All Products
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== CUSTOMIZATION BANNER ==================== -->
+
+        <section class="customize-banner">
+
+            <div class="customize-content">
+
+                <p>MAKE IT YOURS</p>
+
+                <h2>
+                    Your Clothes.
+                    <br>
+                    Your Rules.
+                </h2>
+
+                <p>
+                    Add your own text, name, message or design
+                    and create something that is completely yours.
+                </p>
+
+                <a href="customize.html" class="btn btn-light">
+                    Start Customizing
+                </a>
+
+            </div>
+
+
+            <div class="customize-preview">
+
+                <div class="tshirt-preview">
+
+                    <div class="shirt-shape">
+
+                        <span id="preview-text">
+                            YOUR
+                            <br>
+                            STYLE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== WHY STYLEVERSE ==================== -->
+
+        <section class="features-section">
+
+            <div class="section-heading">
+
+                <p>WHY STYLEVERSE</p>
+
+                <h2>More Than Just Fashion</h2>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ✨
+                    </div>
+
+                    <h3>Unique Styles</h3>
+
+                    <p>
+                        Discover carefully selected fashion
+                        pieces for different personalities.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🎨
+                    </div>
+
+                    <h3>Customize</h3>
+
+                    <p>
+                        Personalize selected clothing with
+                        your own text and creative ideas.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ♡
+                    </div>
+
+                    <h3>Save Favorites</h3>
+
+                    <p>
+                        Add products to your wishlist and
+                        keep your favorite styles together.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🛍️
+                    </div>
+
+                    <h3>Easy Shopping</h3>
+
+                    <p>
+                        Browse, customize, add to cart and
+                        checkout with a simple experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== STYLE CTA ==================== -->
+
+        <section class="style-cta">
+
+            <div>
+
+                <p>READY TO FIND YOUR STYLE?</p>
+
+                <h2>
+                    Let's Create Your Look.
+                </h2>
+
+                <a href="shop.html" class="btn btn-primary">
+                    Explore STYLEVERSE
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-column footer-brand">
+
+                <div class="logo">
+                    STYLE<span>VERSE</span>
+                </div>
+
+                <p>
+                    Fashion that lets you express
+                    who you are.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Shop</h3>
+
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?category=women">Women</a>
+                <a href="shop.html?category=men">Men</a>
+                <a href="shop.html?category=casual">Casual</a>
+                <a href="shop.html?category=formal">Formal</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>STYLEVERSE</h3>
+
+                <a href="index.html">Home</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Help</h3>
+
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 STYLEVERSE. All Rights Reserved.
+            </p>
+
+            <p>
+                Fashion Your Way.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

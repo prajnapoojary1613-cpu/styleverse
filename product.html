@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | STYLEVERSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                STYLE<span>VERSE</span>
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+
+            <button class="search-toggle" onclick="toggleSearch()" aria-label="Open search">
+                🔍
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="search-container">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for outfits..."
+            aria-label="Search for outfits"
+        >
+
+        <button onclick="submitSearch()">Search</button>
+        <button onclick="closeSearch()" aria-label="Close search">✕</button>
+    </div>
+
+    <!-- Page Heading -->
+    <section class="page-banner">
+        <h1>Product Details</h1>
+        <p>Find your style. Make it yours.</p>
+    </section>
+
+    <!-- Product Details -->
+    <main class="content-section">
+
+        <div id="product-detail">
+            <p>Loading product details...</p>
+        </div>
+
+        <div class="product-actions">
+            <a href="shop.html" class="btn btn-secondary">
+                ← Continue Shopping
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    STYLE<span>VERSE</span>
+                </a>
+                <p>Your style, your choice, your universe.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Customer Service</h3>
+                <a href="checkout.html">Checkout</a>
+                <a href="shop.html">Explore Outfits</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STYLEVERSE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

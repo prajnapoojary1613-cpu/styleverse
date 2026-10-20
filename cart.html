@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart | STYLEVERSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                STYLE<span>VERSE</span>
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html" class="active">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+
+            <button class="search-toggle" onclick="toggleSearch()" aria-label="Open search">
+                🔍
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="search-container">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for outfits..."
+            aria-label="Search for outfits"
+        >
+
+        <button onclick="submitSearch()">Search</button>
+        <button onclick="closeSearch()" aria-label="Close search">✕</button>
+    </div>
+
+    <!-- Page Heading -->
+    <section class="page-banner">
+        <h1>My Shopping Cart</h1>
+        <p>Review your selected outfits before checkout.</p>
+    </section>
+
+    <!-- Cart Section -->
+    <main class="content-section">
+
+        <div class="section-heading">
+            <h2>Your Selected Outfits</h2>
+            <p>Check your items and quantities below.</p>
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- Cart Items -->
+            <section class="cart-items-section">
+                <div id="cart-items">
+                    <p>Loading your cart...</p>
+                </div>
+            </section>
+
+            <!-- Cart Summary -->
+            <aside class="summary-card">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="cart-shipping">Calculated at checkout</span>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <strong>Total</strong>
+                    <strong id="cart-total">₹0</strong>
+                </div>
+
+                <a href="checkout.html" class="btn checkout-btn">
+                    Proceed to Checkout
+                </a>
+
+                <a href="shop.html" class="continue-shopping">
+                    ← Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    STYLE<span>VERSE</span>
+                </a>
+                <p>Your style, your choice, your universe.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Customer Service</h3>
+                <a href="checkout.html">Checkout</a>
+                <a href="shop.html">Explore Outfits</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STYLEVERSE. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist | STYLEVERSE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                STYLE<span>VERSE</span>
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html" class="active">Wishlist</a>
+                <a href="cart.html">
+                    Cart (<span id="cart-count">0</span>)
+                </a>
+            </nav>
+
+            <button class="search-toggle" onclick="toggleSearch()" aria-label="Open search">
+                🔍
+            </button>
+
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container" id="search-container">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for outfits..."
+            aria-label="Search for outfits"
+        >
+
+        <button onclick="submitSearch()">Search</button>
+        <button onclick="closeSearch()" aria-label="Close search">✕</button>
+    </div>
+
+    <!-- Page Heading -->
+    <section class="page-banner">
+        <h1>My Wishlist</h1>
+        <p>Your favorite outfits, all in one place.</p>
+    </section>
+
+    <!-- Wishlist Products -->
+    <main class="content-section">
+
+        <div class="section-heading">
+            <h2>Saved Outfits</h2>
+            <p>Keep the styles you love close at hand.</p>
+        </div>
+
+        <div class="product-grid" id="wishlist-products">
+            <p>Loading your wishlist...</p>
+        </div>
+
+        <div class="empty-state">
+            <p>Want to discover more styles?</p>
+            <a href="shop.html" class="btn">Explore Outfits</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    STYLE<span>VERSE</span>
+                </a>
+                <p>Your style, your choice, your universe.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="customize.html">Customize</a>
+                <a href="wishlist.html">Wishlist</a>
+                <a href="cart.html">Cart</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Customer Service</h3>
+                <a href="checkout.html">Checkout</a>
+                <a href="shop.html">Explore Outfits</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 STYLEVERSE. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
